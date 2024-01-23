@@ -35,11 +35,7 @@ public class BasicSecurityConfig {
     @Autowired
     private JwtAuthFilter authFilter;
 
-    /*
-     * No Spring, os objetos que formam a espinha dorsal da sua aplicação e que são 
-     * gerenciados pelo Spring são chamados de Beans. 
-     * Um Bean é um objeto que é instanciado, montado e gerenciado pelo Spring.
-     */
+    
     @Bean //transformar a instância retornada pelo Método em um Objeto gerenciado pelo Spring
     UserDetailsService userDetailsService() {
 
@@ -134,5 +130,7 @@ public class BasicSecurityConfig {
 		return http.build();
 
     }
-
+/*
+ * lembrete: tudo isso que acontece na camada da security é pré processamento, antes de chegar na controler da minha aplicação
+ */
 }
